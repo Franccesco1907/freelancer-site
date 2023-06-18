@@ -41,9 +41,36 @@ body {
 .title {
   text-align: center;
   font-size: 3.8rem;
-  font-weight: 400;
 }
 
 .title span {
   font-size: 2rem;
+}
+
+.nav-bg {
+  background-color: var(--secondary);
+
+}
+
+.container {
+  width: 120rem;
+  margin: 0 auto;
+}
+
+.navigation-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-main a{
+  color: var(--white);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.navigation-main a:hover{
+  background-color: var(--primary);
+  color: var(--black);
 }
