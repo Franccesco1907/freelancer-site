@@ -33,9 +33,13 @@ rem: medida relativa al root
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box; /* Hack box model*/
+  box-sizing: border-box;
+  /* Hack box model*/
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -43,6 +47,15 @@ body {
   font-size: 16px;
   font-family: 'Krub', sans-serif;
   background-image: linear-gradient(to top, var(--gray-light) 0%, var(--white) 100%);
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.54); /*Chrome*/
+  -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.54); /*Firefox*/
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.54);
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
 }
 
 /* Typography */
@@ -59,7 +72,9 @@ h3 {
   font-size: 1.8rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-align: center;
 }
 
@@ -112,6 +127,22 @@ h1, h2, h3 {
   .button {
     width: auto;
   }
+
+  .services {
+    display: grid;
+    /* grid-template-columns: 300px 300px;
+    grid-template-rows: 200px 800px; */
+    /* grid-template-columns: 33.3% 33.3% 33.3%; */
+  
+    /* grid: 200px 800px / 300px 300px; */
+    
+    /* Grid se encarga de hacer el cálculo a diferencia de abajo */
+    /* grid-template-columns: 1fr 1fr 1fr;  */
+    
+    /* Tercera forma */
+    grid-template-columns: repeat(3, 1fr); 
+    column-gap: 1rem;
+  }
 }
 
 .navigation-main a {
@@ -137,6 +168,7 @@ h1, h2, h3 {
   background-size: cover;
   height: 450px;
   position: relative;
+  margin-bottom: 2rem;
 }
 
 .content-hero {
@@ -161,3 +193,28 @@ h1, h2, h3 {
   align-items: flex-end;
 }
 
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service h3 {
+  color: var(--secondary);
+  font-weight: normal;
+}
+
+.service p {
+  line-height: 2; /*Interlineado*/
+  text-align: center;
+}
+
+.service .icons {
+  height: 15rem;
+  width: 15rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
