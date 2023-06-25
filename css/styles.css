@@ -313,9 +313,22 @@ h3 {
 
 /** Scroll Snap**/
 
-.services,
-.navigation-main,
-.form {
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
+@media (max-width: 768px) {
+  header,
+  .hero,
+  .container,
+  .form {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .services,
+  .navigation-main,
+  .form {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
 }
